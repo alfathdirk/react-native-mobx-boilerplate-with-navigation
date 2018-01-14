@@ -3,20 +3,35 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
   TouchableOpacity,
 } from 'react-native';
 import { inject, observer } from 'mobx-react/native';
+import { Header, Button, Icon } from 'react-native-elements';
+
+import { NavigationActions } from 'react-navigation';
 
 import CounterView from '../../components/Counter';
 
-@inject('CounterStore') @observer
+@inject('CounterStore', 'Drawer') @observer
 export default class Home extends Component {
-    render() {
-      const { CounterStore, navigation: { navigate, setParams, state } } = this.props;
 
+
+
+    render() {
+      const { CounterStore, navigation: { navigate, setParams, state }, Drawer } = this.props;
       return (
         <View>
+          <Header
+            leftComponent={<Icon
+              name='menu'
+              size={26}
+              type='material-community'
+              color='#fff'
+              underlayColor="red"
+              onPress={() => Drawer.open() } />}
+            centerComponent={{ text: 'HOME', style: { color: '#fff' } }}
+            rightComponent={{ icon: 'home', color: '#fff' }}
+          />
           <Text>Index screen</Text>
           <TouchableOpacity onPress={()=>navigate("Search", { title: "Search", parentKey: state.key })}>
             <Text>Go to Search</Text>

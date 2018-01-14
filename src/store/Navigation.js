@@ -8,7 +8,7 @@ class NavigationStore {
         { key: "homeRoute", routeName: "Home" },
       ],
     }
-  
+
     // NOTE: the second param, is to avoid stacking and reset the nav state
     @action dispatch = (action, stackNavState = true) => {
       const previousNavState = stackNavState ? this.navigationState : null;

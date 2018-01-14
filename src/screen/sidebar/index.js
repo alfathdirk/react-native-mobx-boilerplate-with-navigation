@@ -8,27 +8,14 @@ import {
   Button,
 } from 'react-native';
 
-export default class Counter extends Component {
+export default class SideBar extends Component {
   render() {
-    const { count, onPlus, onMinus } = this.props;
 
     return (
       <View style={styles.container}>
-        <Button
-          style={styles.button}
-          title={`-`}
-          onPress={onMinus}
-        />
-
-      <Text style={styles.text}>
-          { count }
+        <Text>
+          Helo
         </Text>
-
-        <Button
-          style={styles.button}
-          title={`+`}
-          onPress={onPlus}
-        />
       </View>
     );
   }

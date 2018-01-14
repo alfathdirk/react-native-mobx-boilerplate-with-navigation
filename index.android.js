@@ -1,1 +1,1 @@
-import App from './src/app';
+import AppNavigator from './src/AppNavigator';
