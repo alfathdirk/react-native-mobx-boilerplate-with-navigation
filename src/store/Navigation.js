@@ -1,11 +1,12 @@
 import { observable, action } from 'mobx';
 
 class NavigationStore {
-    @observable headerTitle = "Home"
+    @observable headerTitle = "Home";
+    @observable rootScene = 'SplashScreen';
     @observable.ref navigationState = {
       index: 0,
       routes: [
-        { key: "homeRoute", routeName: "Home" },
+        { key: "homeRoute", routeName: this.rootScene },
       ],
     }
 
