@@ -7,6 +7,6 @@ react native mobx boilerplate with navigation
 $ git clone https://github.com/alfathdirk/react-native-mobx-boilerplate-with-navigation
 $ cd react-native-mobx-boilerplate-with-navigation
 $ npm i
-$ react-native link && react-native run-android
+$ react-native run-android
 ```
 
