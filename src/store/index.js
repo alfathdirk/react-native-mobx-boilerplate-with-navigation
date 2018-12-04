@@ -18,5 +18,5 @@ let stores = {
 hydrate('Account', stores.Account);
 
 export default {
-  ...stores
-}
+  ...stores,
+};

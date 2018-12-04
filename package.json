@@ -1,39 +1,40 @@
 {
-	"name": "SippoMobx",
-	"version": "0.0.1",
-	"private": false,
-	"author": "alfathdirk[at]gmail.com",
-	"scripts": {
-		"start": "node node_modules/react-native/local-cli/cli.js start",
-		"test": "jest"
-	},
-	"dependencies": {
-		"babel-preset-react-native-stage-0": "^1.0.1",
-		"mobx": "^3.2.1",
-		"mobx-persist": "^0.4.1",
-		"mobx-react": "^4.2.2",
-		"react": "16.0.0-alpha.12",
-		"react-native": "0.48.2",
-		"react-native-drawer": "^2.5.0",
-		"react-native-easy-grid": "^0.1.16",
-		"react-native-elements": "^0.19.0",
-		"react-native-snap-carousel": "^3.5.0",
-		"react-native-tab-navigator": "^0.3.4",
-		"react-native-vector-icons": "^4.5.0",
-		"react-navigation": "1.0.0-beta.26"
-	},
-	"devDependencies": {
-		"babel-eslint": "^8.2.1",
-		"babel-jest": "22.0.6",
-		"babel-preset-react-native": "4.0.0",
-		"eslint": "^4.15.0",
-		"eslint-config-airbnb-base": "^12.1.0",
-		"eslint-plugin-react": "^7.5.1",
-		"eslint-plugin-react-native": "^3.2.1",
-		"jest": "22.0.6",
-		"react-test-renderer": "16.0.0-alpha.12"
-	},
-	"jest": {
-		"preset": "react-native"
-	}
+  "name": "reactskeletonapp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "eslintfix": "eslint src/screen/* --fix",
+    "test": "jest"
+  },
+  "dependencies": {
+    "mobx": "^5.7.0",
+    "mobx-persist": "^0.4.1",
+    "mobx-react": "^5.4.2",
+    "react": "16.6.1",
+    "react-native": "0.57.7",
+    "react-native-drawer": "^2.5.1",
+    "react-native-elements": "^0.19.1",
+    "react-native-gesture-handler": "^1.0.10",
+    "react-native-vector-icons": "^6.1.0",
+    "react-navigation": "^3.0.5"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.2.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "23.6.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react-native": "^3.5.0",
+    "jest": "23.6.0",
+    "jsc-android": "^236355.1.1",
+    "metro-react-native-babel-preset": "0.50.0",
+    "react-test-renderer": "16.6.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
 }

@@ -1,22 +1,23 @@
 import { observable, action } from 'mobx';
+import AppNavigator from '../router/router';
 
 class NavigationStore {
-    @observable headerTitle = "Home";
-    @observable rootScene = 'SplashScreen';
-    @observable.ref navigationState = {
-      index: 0,
-      routes: [
-        { key: "homeRoute", routeName: this.rootScene },
-      ],
-    }
+  @observable headerTitle = 'Home';
 
-    // NOTE: the second param, is to avoid stacking and reset the nav state
-    @action dispatch = (action, stackNavState = true) => {
-      const previousNavState = stackNavState ? this.navigationState : null;
-      return this.navigationState = AppNavigator
-          .router
-          .getStateForAction(action, previousNavState);
-    }
+  @observable rootScene = 'SplashScreen';
+
+  @observable.ref navigationState = {
+    index: 0,
+    routes: [
+      { key: 'homeRoute', routeName: this.rootScene }
+    ],
   }
+
+  @action dispatch = (actions, stackNavState = true) => {
+    const previousNavState = stackNavState ? this.navigationState : null;
+    this.navigationState = AppNavigator.router.getStateForAction(actions, previousNavState);
+    return this.navigationState;
+  }
+}
 
 export default NavigationStore;

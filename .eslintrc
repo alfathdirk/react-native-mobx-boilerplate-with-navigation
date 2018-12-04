@@ -1,0 +1,109 @@
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "legacyDecorators": true
+    }
+  },
+  "rules": {
+    "react/prop-types": 0,
+    "react/forbid-prop-types": 2,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "no-extra-boolean-cast": 0,
+    "no-underscore-dangle": [
+      0,
+      {
+        "allowAfterThis": true
+      }
+    ],
+    "react/no-array-index-key": [
+      "disabled"
+    ],
+    "camelcase": 1,
+    "max-len": [
+      "warn",
+      {
+        "code": 120,
+        "ignoreComments": true
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "import/no-named-as-default": "off",
+    "import/prefer-default-export": "off",
+    "indent": "off",
+    "indent-legacy": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "no-alert": "off",
+    "no-param-reassign": 1,
+    "prefer-const": 0,
+    "prefer-destructuring": 1,
+    "no-else-return": 0,
+    "react/require-default-props": 0,
+    "react/no-string-refs": 0,
+    "react/no-unused-state": 1,
+    "react/prefer-stateless-function": [0, { "ignorePureComponents": true }],
+    "react/jsx-max-props-per-line": [2, { "maximum": 2, "when": "multiline" }],
+    "no-unused-vars": ["error", { "args": "none" }],
+    "key-spacing": ["error", { "mode": "minimum" }],
+    "no-return-assign": 1,
+    "arrow-body-style": [
+      0,
+      "as-needed", { "requireReturnForObjectLiteral": true }
+    ],
+    "comma-dangle": ["error", {
+      "arrays": "never",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "ignore"
+    }],
+    "react/jsx-no-bind": [
+      "error",
+      {
+        "ignoreRefs": true,
+        "allowArrowFunctions": true,
+        "allowBind": true
+      }
+    ],
+    "react/jsx-wrap-multilines": 0,
+    "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
+    "padded-blocks": 0,
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".android.js",
+          ".ios.js"
+        ]
+      }
+    }
+  },
+  "extends": "airbnb"
+}

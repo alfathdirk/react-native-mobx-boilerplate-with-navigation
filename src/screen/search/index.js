@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import {
-  StyleSheet,
   Text,
   View,
   Button,
-  TouchableOpacity
+  TouchableOpacity,
 } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 
@@ -16,24 +15,24 @@ import CounterView from '../../components/Counter';
 export default class Search extends Component {
 
   updateHome = (params) => {
-    const {state, dispatch, goBack} = this.props.navigation
+    const { navigation: { state, dispatch, goBack } } = this.props;
     dispatch(NavigationActions.setParams({
       params,
-      key: state.params.parentKey, 
-    }))
-    goBack(null)
+      key: state.params.parentKey,
+    }));
+    goBack(null);
   }
 
   render() {
-      const { CounterStore, navigation: { navigate } } = this.props;
-    
-      return (
-        <View>
-          <Text>Search screen</Text>
-          <TouchableOpacity onPress={()=>this.updateHome({search: "Cats", title: "Cats"})}>
+    const { CounterStore, navigation: { navigate } } = this.props;
+
+    return (
+      <View>
+        <Text>Search screen</Text>
+        <TouchableOpacity onPress={() => this.updateHome({ search: 'Cats', title: 'Cats' })}>
           <Text>Search for Cats</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=>this.updateHome({search: "Dogs", title: "Dogs"})}>
+        <TouchableOpacity onPress={() => this.updateHome({ search: 'Dogs', title: 'Dogs' })}>
           <Text>Search for Dogs</Text>
         </TouchableOpacity>
         <CounterView
@@ -42,12 +41,10 @@ export default class Search extends Component {
           onMinus={() => CounterStore.onMinus()}
         />
         <Button
-          onPress={() => navigate("NewScreen", { title: "New Screen" })}
+          onPress={() => navigate('NewScreen', { title: 'New Screen' })}
           title="Tap me to load the next scene"
         />
-        </View>
-      )
-    }
+      </View>
+    );
   }
-  
-  
+  }
