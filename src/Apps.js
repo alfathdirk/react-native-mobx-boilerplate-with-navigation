@@ -26,22 +26,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <SideDrawer
-        type="overlay"
-        tapToClose
-        openDrawerOffset={0.3} // 20% gap on the right side of drawer
-        panCloseMask={0.3}
-        acceptPan
-        closedDrawerOffset={-3}
-        tweenHandler={ratio => ({
-          main: { opacity: (2 - ratio) / 2 },
-        })}
-        styles={drawerStyles}
-        ref={ref => this._drawer = ref}
-        content={<SideBar />}
-      >
-        <AppNavigator />
-      </SideDrawer>
+      <AppNavigator />
     );
   }
 }
